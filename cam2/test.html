@@ -76,6 +76,14 @@
       font-size: 14px;
     }
     
+      #Model_Title{
+          visibility:hidden;
+          display:none;
+          
+      }
+      
+      
+      
     .conceptBox {
       float:left; 
       margin-left:40px; 
@@ -90,7 +98,7 @@
   <div id="Model_Title" style="font-size:16px; margin-bottom:5px">Model</div>
   <input type="hidden" id="hidden-counter" name="hidden-counter" value="1"/>
   <form action="" style="font-size:14px; margin-bottom:20px; float:left; margin-right:30px;">
-    <input type="radio" name="model" value="general" checked="checked"> General<br>
+    <input type="radio" name="model" value="general"> General<br>
     <input type="radio" name="model" value="food"> Food<br>
     <input type="radio" name="model" value="NSFW"> NSFW<br>
     <input type="radio" name="model" value="travel"> Travel<br>
@@ -106,7 +114,7 @@
     <input type="radio" name="model" value="portrait"> Portrait Quality<br>
     <input type="radio" name="model" value="landscape"> Landscape Quality<br>
     <input type="radio" name="model" value="texturespatterns"> Textures & Patterns<br>
-    <input type="radio" name="model" value="custom"> Custom &nbsp;<select id="custom_models_dropdown"></select><br>
+    <input type="radio" name="model" value="custom" checked="checked"> Custom &nbsp;<select id="custom_models_dropdown"></select><br>
   </form>
   <div style="float:left">
     <button onclick="
