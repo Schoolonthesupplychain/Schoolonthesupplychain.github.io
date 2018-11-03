@@ -1,0 +1,473 @@
+<html class="overthrow-enabled gr__schoolonthesupplychain_github_io"><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <base href="/demo/">
+    <title>Mobile Angular UI Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-status-bar-style" content="yes">
+    <link rel="shortcut icon" href="/assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-hover.min.css">
+    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-base.min.css">
+    <link rel="stylesheet" href="/dist/css/mobile-angular-ui-desktop.min.css">
+    <link rel="stylesheet" href="demo.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="/dist/js/mobile-angular-ui.min.js"></script>
+    <!-- Required to use $touch, $swipe, $drag and $translate services -->
+    <script src="/dist/js/mobile-angular-ui.gestures.min.js"></script>
+    <script src="demo.js"></script>
+  <style></style></head>
+
+  <body ng-app="MobileAngularUiExamples" ng-controller="MainController" ui-prevent-touchmove-defaults="" data-gr-c-s-loaded="true" class="ng-scope has-navbar-top has-navbar-bottom has-sidebar-left has-sidebar-right">
+
+    <!-- Sidebars -->
+    <!-- ngInclude: 'sidebar.html' --><div ng-include="'sidebar.html'" ui-track-as-search-param="true" class="sidebar sidebar-left ng-scope"><div class="scrollable ng-scope" style="padding-top: 0px;">
+  <h1 class="scrollable-header app-name">Mobile Angular UI <small>1.3</small></h1>
+  <div class="scrollable-content">
+    <div class="list-group" ui-turn-off="uiSidebarLeft">
+      <a class="list-group-item" href="#/">Home <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/scroll">Scroll <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/toggle">Toggle <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/tabs">Tabs <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/accordion">Accordion <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/overlay">Overlay <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item active" href="#/forms">Forms <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/dropdown">Dropdown <i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/touch">Touch<i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/swipe">Swipe<i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/drag">Drag 1<i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/drag2">Drag 2<i class="fa fa-chevron-right pull-right"></i></a>
+      <a class="list-group-item" href="#/carousel">Drag 3<i class="fa fa-chevron-right pull-right"></i></a>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- ngInclude: 'sidebarRight.html' --><div ng-include="'sidebarRight.html'" class="sidebar sidebar-right ng-scope"><div class="scrollable ng-scope">
+  <div class="scrollable-content">
+      <div class="list-group" ui-toggle="uiSidebarRight">
+
+          <!-- ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Carlos  Flowers</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Byron Taylor</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Jana  Terry</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Darryl  Stone</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Fannie  Carlson</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Holly Nguyen</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Bill  Chavez</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Veronica  Maxwell</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Jessica Webster</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Jackie  Barton</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true --><span ng-switch-when="true" class="ng-scope">
+                          <span class="label label-success">ONLINE</span>
+                      </span><!-- end ngSwitchWhen: -->
+                      <!-- ngSwitchDefault: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Crystal Drake</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Milton  Dean</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Joann Johnston</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Cora  Vaughn</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Nina  Briggs</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Casey Turner</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Jimmie  Wilson</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Nathaniel Steele</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Aubrey  Cole</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Donnie  Summers</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Kate  Myers</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Priscilla Hawkins</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Joe Barker</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Lee Norman</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers --><a class="list-group-item media ng-scope" href="" ng-repeat="user in chatUsers">
+              <div class="pull-left">
+                  <i class="fa fa-user chat-user-avatar"></i>
+              </div>
+              <div class="media-body">
+                  <h5 class="media-heading ng-binding">Ebony Rice</h5>
+                  <small ng-switch="" on="user.online">
+                      <!-- ngSwitchWhen: true -->
+                      <!-- ngSwitchDefault: --><span ng-switch-default="" class="ng-scope">
+                          <span class="label label-default"><i>OFFLINE</i>
+                          </span>
+                      </span><!-- end ngSwitchWhen: -->
+                  </small>
+              </div>
+          </a><!-- end ngRepeat: user in chatUsers -->
+
+      </div>
+  </div>
+</div>
+</div>
+
+    <div class="app" ui-swipe-right="Ui.turnOn('uiSidebarLeft')" ui-swipe-left="Ui.turnOff('uiSidebarLeft')">
+
+      <!-- Navbars -->
+
+      <div class="navbar navbar-app navbar-absolute-top">
+        <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+  <span class="ng-scope">Forms</span>
+</div>
+        <div class="btn-group pull-left">
+          <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+            <i class="fa fa-bars"></i> Menu
+          </div>
+        </div>
+        <div class="btn-group pull-right" ui-yield-to="navbarAction">
+      <a class="btn ng-scope" ng-click="login()">Login</a>
+    </div>
+      </div>
+
+      <div class="navbar navbar-app navbar-absolute-bottom">
+        <div class="btn-group justified">
+          <a href="/docs" class="btn btn-navbar"><i class="fa fa-home fa-navbar"></i> Docs</a>
+          <a href="https://github.com/mcasimir/mobile-angular-ui" class="btn btn-navbar"><i class="fa fa-github fa-navbar"></i> Sources</a>
+          <a href="https://github.com/mcasimir/mobile-angular-ui/issues" class="btn btn-navbar"><i class="fa fa-exclamation-circle fa-navbar"></i> Issues</a>
+        </div>
+      </div>
+
+      <!-- App Body -->
+      <div class="app-body" ng-class="{loading: loading}">
+        <div ng-show="loading" class="app-content-loading ng-hide">
+          <i class="fa fa-spinner fa-spin loading-spinner"></i>
+        </div>
+        <div class="app-content">
+          <!-- ngView: --><ng-view class="ng-scope">
+
+<div class="scrollable ng-scope">
+ <div class="scrollable-content section">
+   
+  <form role="form" ng-submit="login()" class="ng-pristine ng-valid ng-valid-email">
+    <fieldset>
+      <legend>Login</legend>
+        <div class="form-group has-success has-feedback">
+          <label>Email</label>
+          <input type="email" ng-model="email" class="form-control ng-pristine ng-untouched ng-valid needsclick ng-not-empty ng-valid-email" placeholder="Enter email" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control needsclick" placeholder="Password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
+        </div>
+
+        <div class="form-group">
+          <label>Remember Me</label>
+          <ui-switch ng-model="rememberMe" class="ng-pristine ng-untouched ng-valid ng-isolate-scope switch active switch-transition-enabled ng-not-empty"><div class="switch-handle"></div></ui-switch>
+        </div>
+    </fieldset>
+    <hr>
+
+    <button class="btn btn-primary btn-block">
+      Login
+    </button>
+
+    
+
+  </form>
+ </div>
+</div>
+</ng-view>
+        </div>
+      </div>
+
+    </div><!-- ~ .app -->
+
+    <div ui-yield-to="modals"></div>
+  
+
+<span style="margin: 0px auto; border: 2px dotted rgb(0, 0, 0); position: absolute; z-index: 2147483647; visibility: hidden; left: 727px; width: 0px; top: 135px; height: 0px;"></span><span style="z-index: 2147483647; position: absolute; visibility: hidden; left: 712px; width: 50px; top: 120px; height: 20px; font-size: 10px; color: black;"></span></body></html>
